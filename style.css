@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat";
+}
+
+body {
+    background-color: #c7ecee;
+    display: flex;
+    /*căn giữa màn hình*/
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.select-menu {
+    width: 300px;
+    cursor: pointer;
+    position: relative;
+}
+
+.select {
+    background-color: #000;
+    padding: 20px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 6px;
+}
+
+.option-list {
+    position: absolute;
+    width: 100%;
+    background-color: #f9f9f9;
+    border-radius: 6px;
+    margin-top: 14px;
+    padding: 0 20px;
+    max-height: 180px;
+    overflow-y: auto;
+    transition: 0.4s linear 0.2s;
+    height: 0;
+    /* display: none; */
+}
+
+.option {
+    padding: 8px 0;
+    font-weight: 500;
+    font-size: 14px;
+    transition: 0.3s ease-in-out ;
+}
+
+.option:hover,
+.option.selected {
+    color: #00a8ff;
+}
+
+/*thanh scroll*/
+.option-list::-webkit-scrollbar {
+    width: 4px;
+    background-color: #eee;
+}
+
+.option-list::-webkit-scrollbar-thumb {
+    background-color:#00a8ff;
+}
+
+/*kich hoat*/
+.option-list.active {
+    /* display: block; */
+    height: 180px;
+}
